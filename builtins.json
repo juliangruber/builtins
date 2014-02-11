@@ -1,4 +1,5 @@
 [
+  "assert",
   "child_process",
   "cluster",
   "crypto",
