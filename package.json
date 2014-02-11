@@ -3,5 +3,6 @@
   "version": "0.0.0",
   "description": "List of node.js builtin modules",
   "repository": "segmentio/builtins",
-  "license": "MIT"
+  "license": "MIT",
+  "main": "builtins.json"
 }
