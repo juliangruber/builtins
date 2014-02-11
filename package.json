@@ -1,6 +1,6 @@
 {
   "name": "builtins",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "List of node.js builtin modules",
   "repository": "segmentio/builtins",
   "license": "MIT",
