@@ -4,5 +4,5 @@
   "description": "List of node.js builtin modules",
   "repository": "segmentio/builtins",
   "license": "MIT",
-  "main": "builtins.json"
+  "main": "index.js"
 }
