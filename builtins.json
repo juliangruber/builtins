@@ -18,6 +18,7 @@
   "repl",
   "stream",
   "string_decoder",
+  "timers",
   "tls",
   "tty",
   "dgram",
