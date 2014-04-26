@@ -4,5 +4,8 @@
   "description": "List of node.js builtin modules",
   "repository": "segmentio/builtins",
   "license": "MIT",
-  "main": "builtins.json"
+  "main": "builtins.json",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  }
 }
