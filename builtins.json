@@ -10,6 +10,7 @@
   "fs",
   "http",
   "https",
+  "module",
   "net",
   "os",
   "path",
