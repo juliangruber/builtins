@@ -2,7 +2,7 @@
   "name": "builtins",
   "version": "0.0.6",
   "description": "List of node.js builtin modules",
-  "repository": "segmentio/builtins",
+  "repository": "juliangruber/builtins",
   "license": "MIT",
   "main": "builtins.json",
   "publishConfig": {
