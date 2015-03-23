@@ -17,6 +17,7 @@
   "path",
   "punycode",
   "querystring",
+  "readline",
   "repl",
   "stream",
   "string_decoder",
