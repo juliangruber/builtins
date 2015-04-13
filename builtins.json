@@ -4,6 +4,7 @@
   "child_process",
   "cluster",
   "constants",
+  "console",
   "crypto",
   "dns",
   "domain",
