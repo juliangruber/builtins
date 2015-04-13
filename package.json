@@ -9,6 +9,6 @@
     "registry": "https://registry.npmjs.org"
   },
   "scripts": {
-    "test": "node -e \"require('./builtins.json')\""
+    "test": "node test.js"
   }
 }
