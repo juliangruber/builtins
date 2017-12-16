@@ -4,7 +4,18 @@
   "description": "List of node.js builtin modules",
   "repository": "juliangruber/builtins",
   "license": "MIT",
-  "main": "builtins.json",
+  "main": "index.js",
+  "scripts": {
+    "test": "prettier-standard && standard && node test.js"
+  },
+  "dependencies": {
+    "semver": "^5.4.1"
+  },
+  "devDependencies": {
+    "prettier-standard": "^7.0.3",
+    "standard": "^10.0.3",
+    "tape": "^4.8.0"
+  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },

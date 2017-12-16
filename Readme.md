@@ -7,10 +7,20 @@
 
 ## Example
 
-```js
-var builtins = require('builtins');
+Get list of core modules for current Node.js version:
 
-assert(builtins.indexOf('http') > -1);
+```js
+var builtins = require('builtins')()
+
+assert(builtins.indexOf('http') > -1)
+```
+
+Get list of core modules for specific Node.js version:
+
+```js
+var builtins = require('builtins')('6.0.0')
+
+assert(builtins.indexOf('http') > -1)
 ```
 
 ## License
