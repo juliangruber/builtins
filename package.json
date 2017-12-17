@@ -1,12 +1,12 @@
 {
   "name": "builtins",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "List of node.js builtin modules",
   "repository": "juliangruber/builtins",
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "test": "prettier-standard && standard && node test.js"
+    "test": "node test.js"
   },
   "dependencies": {
     "semver": "^5.4.1"
@@ -18,8 +18,5 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
-  },
-  "scripts": {
-    "test": "node test.js"
   }
 }
