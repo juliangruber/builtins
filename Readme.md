@@ -3,7 +3,7 @@
 
   List of node.js [builtin modules](http://nodejs.org/api/).
 
-  [![build status](https://secure.travis-ci.org/juliangruber/builtins.svg)](http://travis-ci.org/juliangruber/builtins)
+  [![build status](https://secure.travis-ci.org/juliangruber/builtins.svg)](http://travis-ci.org/juliangruber/builtins) [![Greenkeeper badge](https://badges.greenkeeper.io/juliangruber/builtins.svg)](https://greenkeeper.io/)
 
 ## Example
 
