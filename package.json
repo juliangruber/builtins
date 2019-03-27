@@ -9,7 +9,7 @@
     "test": "node test.js"
   },
   "dependencies": {
-    "semver": "^5.4.1"
+    "semver": "^6.0.0"
   },
   "devDependencies": {
     "prettier-standard": "^9.0.0",
