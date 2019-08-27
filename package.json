@@ -12,8 +12,8 @@
     "semver": "^6.0.0"
   },
   "devDependencies": {
-    "prettier-standard": "^9.0.0",
-    "standard": "^13.0.1",
-    "tape": "^4.8.0"
+    "prettier-standard": "^11.0.0",
+    "standard": "^14.0.2",
+    "tape": "^4.11.0"
   }
 }
