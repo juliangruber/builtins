@@ -5,6 +5,7 @@
   "repository": "juliangruber/builtins",
   "license": "MIT",
   "main": "index.js",
+  "files": [],
   "scripts": {
     "test": "node test.js"
   },
