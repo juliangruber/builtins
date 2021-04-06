@@ -47,9 +47,9 @@ module.exports = function (version) {
   if (semver.gte(version, '8.1.0')) coreModules.push('async_hooks')
   if (semver.gte(version, '8.4.0')) coreModules.push('http2')
   if (semver.gte(version, '8.5.0')) coreModules.push('perf_hooks')
+  if (semver.gte(version, '10.0.0')) coreModules.push('trace_events')
   if (semver.gte(version, '10.5.0')) coreModules.push('worker_threads')
   if (semver.gte(version, '12.16.0')) coreModules.push('wasi')
-  if (semver.gte(version, '10.0.0')) coreModules.push('trace_events')
   
   return coreModules
 }
