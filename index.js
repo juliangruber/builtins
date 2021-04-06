@@ -46,7 +46,6 @@ module.exports = function (version) {
   if (semver.gte(version, '8.1.0')) coreModules.push('async_hooks')
   if (semver.gte(version, '8.4.0')) coreModules.push('http2')
   if (semver.gte(version, '8.5.0')) coreModules.push('perf_hooks')
-  if (semver.gte(version, '8.5.0')) coreModules.push('perf_hooks')
   if (semver.gte(version, '10.5.0')) coreModules.push('worker_threads')
   
   return coreModules
