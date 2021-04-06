@@ -43,6 +43,7 @@ module.exports = function (version) {
   if (semver.lt(version, '6.0.0')) coreModules.push('freelist')
   if (semver.gte(version, '1.0.0')) coreModules.push('v8')
   if (semver.gte(version, '1.1.0')) coreModules.push('process')
+  if (semver.gte(version, '8.0.0')) coreModules.push('inspector')
   if (semver.gte(version, '8.1.0')) coreModules.push('async_hooks')
   if (semver.gte(version, '8.4.0')) coreModules.push('http2')
   if (semver.gte(version, '8.5.0')) coreModules.push('perf_hooks')
