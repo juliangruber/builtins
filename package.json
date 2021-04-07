@@ -8,7 +8,7 @@
   "files": [],
   "scripts": {
     "release": "np",
-    "test": "node test.js"
+    "test": "node --experimental-wasi-unstable-preview1 --experimental-worker test.js"
   },
   "dependencies": {
     "semver": "^7.0.0"
