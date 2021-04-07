@@ -2,9 +2,10 @@
 
 var semver = require('semver')
 
-module.exports = function (version) {
-  version = version || process.version
-
+module.exports = function ({
+  version = process.version,
+  experimental = false
+} = {}) {
   var coreModules = [
     'assert',
     'buffer',
@@ -48,8 +49,16 @@ module.exports = function (version) {
   if (semver.gte(version, '8.4.0')) coreModules.push('http2')
   if (semver.gte(version, '8.5.0')) coreModules.push('perf_hooks')
   if (semver.gte(version, '10.0.0')) coreModules.push('trace_events')
-  if (semver.gte(version, '10.5.0')) coreModules.push('worker_threads')
-  if (semver.gte(version, '12.16.0')) coreModules.push('wasi')
+
+  if (
+    semver.gte(version, '10.5.0') &&
+    (experimental || semver.gte(version, '12.0.0'))
+  ) {
+    coreModules.push('worker_threads')
+  }
+  if (semver.gte(version, '12.16.0') && experimental) {
+    coreModules.push('wasi')
+  }
   
   return coreModules
 }

@@ -18,9 +18,17 @@ assert(builtins.indexOf('http') > -1)
 Get list of core modules for specific Node.js version:
 
 ```js
-var builtins = require('builtins')('6.0.0')
+var builtins = require('builtins')({ version: '6.0.0' })
 
 assert(builtins.indexOf('http') > -1)
+```
+
+Add experimental modules to the list:
+
+```js
+var builtins = require('builtins')({ experimental: true })
+
+assert(builtins.indexOf('wasi') > -1)
 ```
 
 ## License
