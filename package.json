@@ -4,19 +4,31 @@
   "description": "List of node.js builtin modules",
   "repository": "juliangruber/builtins",
   "license": "MIT",
-  "main": "index.js",
+  "type": "module",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/mjs/index.js",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/mjs/index.js"
+    }
+  },
+  "types": "./dist/mjs/index.d.ts",
   "files": [],
   "scripts": {
+    "build": "rimraf cjs/**,mjs/** && tsc -p tsconfig.cjs.json && tsc -p tsconfig.mjs.json",
     "release": "np",
     "test": "node test.js"
   },
   "dependencies": {
-    "semver": "^7.0.0"
+    "semver": "github:MylesBorins/node-semver#alternative-esm"
   },
   "devDependencies": {
-    "np": "^6.1.0",
-    "prettier-standard": "^15.0.0",
-    "standard": "^14.0.2",
-    "tape": "^4.11.0"
+    "np": "^6.5.0",
+    "prettier-standard": "^15.0.1",
+    "rimraf": "^3.0.2",
+    "standard": "^14.3.4",
+    "tape": "^4.13.3",
+    "typescript": "^4.3.5"
   }
 }
