@@ -24,11 +24,11 @@
     "semver": "github:MylesBorins/node-semver#alternative-esm"
   },
   "devDependencies": {
-    "np": "^6.5.0",
-    "prettier-standard": "^15.0.1",
+    "np": "^7.5.0",
+    "prettier-standard": "^16.4.1",
     "rimraf": "^3.0.2",
-    "standard": "^14.3.4",
-    "tape": "^4.13.3",
+    "standard": "^16.0.3",
+    "tape": "^5.2.2",
     "typescript": "^4.3.5"
   }
 }
