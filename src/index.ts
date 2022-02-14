@@ -1,12 +1,12 @@
 'use strict'
 
-var semver = require('semver')
+import semver from 'semver'
 
-module.exports = function ({
+export default function builtins({
   version = process.version,
   experimental = false
-} = {}) {
-  var coreModules = [
+} = {}):string[] {
+  const coreModules = [
     'assert',
     'buffer',
     'child_process',
@@ -59,6 +59,6 @@ module.exports = function ({
   if (semver.gte(version, '12.16.0') && experimental) {
     coreModules.push('wasi')
   }
-  
+
   return coreModules
 }
