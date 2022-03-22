@@ -59,6 +59,16 @@ module.exports = function ({
   if (semver.gte(version, '12.16.0') && experimental) {
     coreModules.push('wasi')
   }
+
+  if (
+    experimental &&
+    (
+      semver.gte(version, '14.17.0') && semver.lt(version, '15.0.0') ||
+      semver.gte(version, '15.1.0')
+    )
+  ) {
+    coreModules.push('diagnostics_channel')
+  }
   
   return coreModules
 }

@@ -63,6 +63,20 @@ test('wasi', function(t) {
   t.end()
 })
 
+test('diagnostics_channel', function(t) {
+  t.notOk(builtins({ version: '15.0.0', experimental: true }).includes('diagnostics_channel'))
+  t.notOk(builtins({ version: '15.1.0' }).includes('diagnostics_channel'))
+  t.ok(builtins({ version: '15.1.0', experimental: true }).includes('diagnostics_channel'))
+  t.ok(builtins({ version: '15.2.0', experimental: true }).includes('diagnostics_channel'))
+  
+  t.notOk(builtins({ version: '14.17.0' }).includes('diagnostics_channel'))
+  t.notOk(builtins({ version: '14.16.0', experimental: true }).includes('diagnostics_channel'))
+  t.ok(builtins({ version: '14.17.0', experimental: true }).includes('diagnostics_channel'))
+  t.ok(builtins({ version: '14.18.0', experimental: true }).includes('diagnostics_channel'))
+  
+  t.end()
+})
+
 test('default to current version', function (t) {
   builtins().forEach(function (name) {
     t.ok(require(name), name)
