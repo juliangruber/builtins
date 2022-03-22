@@ -1,6 +1,6 @@
 {
   "name": "builtins",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "List of node.js builtin modules",
   "repository": "juliangruber/builtins",
   "license": "MIT",
