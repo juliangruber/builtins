@@ -54,7 +54,7 @@ module.exports = function ({
   }
 
   Object.entries(versionLockedModules).forEach(([name, v]) => {
-    if (semver.satisfies(version, v)) {
+    if (version =='*' || semver.satisfies(version, v)) {
       coreModules.push(name)
     }
   })
@@ -67,7 +67,7 @@ module.exports = function ({
 
   if (experimental) {
     Object.entries(experimentalModules).forEach(([name, v]) => {
-      if (!coreModules.includes(name) && semver.satisfies(version, v)) {
+      if (!coreModules.includes(name) && (version == '*' || semver.satisfies(version, v))) {
         coreModules.push(name)
       }
     })

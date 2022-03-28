@@ -83,3 +83,9 @@ test('default to current version', function (t) {
   })
   t.end()
 })
+
+test('returns all builtins with version *', function(t) {
+  t.equal(builtins({ version: '*' }).length, 32 + 9)
+  t.equal(builtins({ version: '*', experimental: true }).length, 32 + 9 + 2)
+  t.end()
+})
