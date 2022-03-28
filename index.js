@@ -41,33 +41,36 @@ module.exports = function ({
     'zlib'
   ]
 
-  if (semver.lt(version, '6.0.0')) coreModules.push('freelist')
-  if (semver.gte(version, '1.0.0')) coreModules.push('v8')
-  if (semver.gte(version, '1.1.0')) coreModules.push('process')
-  if (semver.gte(version, '8.0.0')) coreModules.push('inspector')
-  if (semver.gte(version, '8.1.0')) coreModules.push('async_hooks')
-  if (semver.gte(version, '8.4.0')) coreModules.push('http2')
-  if (semver.gte(version, '8.5.0')) coreModules.push('perf_hooks')
-  if (semver.gte(version, '10.0.0')) coreModules.push('trace_events')
-
-  if (
-    semver.gte(version, '10.5.0') &&
-    (experimental || semver.gte(version, '12.0.0'))
-  ) {
-    coreModules.push('worker_threads')
-  }
-  if (semver.gte(version, '12.16.0') && experimental) {
-    coreModules.push('wasi')
+  var versionLockedModules = {
+    'freelist': '<6.0.0',
+    'v8': '>=1.0.0',
+    'process': '>=1.1.0',
+    'inspector': '>=8.0.0',
+    'async_hooks': '>=8.1.0',
+    'http2': '>=8.4.0',
+    'perf_hooks': '>=8.5.0',
+    'trace_events': '>=10.0.0',
+    'worker_threads': '>=12.0.0',
   }
 
-  if (
-    experimental &&
-    (
-      semver.gte(version, '14.17.0') && semver.lt(version, '15.0.0') ||
-      semver.gte(version, '15.1.0')
-    )
-  ) {
-    coreModules.push('diagnostics_channel')
+  Object.entries(versionLockedModules).forEach(([name, v]) => {
+    if (semver.satisfies(version, v)) {
+      coreModules.push(name)
+    }
+  })
+
+  var experimentalModules = {
+    'worker_threads': '>=10.5.0',
+    'wasi': '>=12.16.0',
+    'diagnostics_channel': '^14.17.0 || >=15.1.0',
+  }
+
+  if (experimental) {
+    Object.entries(experimentalModules).forEach(([name, v]) => {
+      if (!coreModules.includes(name) && semver.satisfies(version, v)) {
+        coreModules.push(name)
+      }
+    })
   }
   
   return coreModules
