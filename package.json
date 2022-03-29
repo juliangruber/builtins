@@ -7,7 +7,6 @@
   "main": "index.js",
   "files": [],
   "scripts": {
-    "release": "np",
     "test": "prettier-standard && standard && node test.js"
   },
   "dependencies": {
@@ -15,7 +14,6 @@
   },
   "devDependencies": {
     "node-core-test": "^1.1.1",
-    "np": "^6.1.0",
     "prettier-standard": "^15.0.1",
     "standard": "^14.3.4"
   }
