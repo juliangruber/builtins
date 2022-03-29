@@ -1,9 +1,8 @@
-
 # builtins
 
-  List of node.js [builtin modules](http://nodejs.org/api/).
+List of node.js [builtin modules](http://nodejs.org/api/).
 
-  [![build status](https://secure.travis-ci.org/juliangruber/builtins.svg)](http://travis-ci.org/juliangruber/builtins) [![Greenkeeper badge](https://badges.greenkeeper.io/juliangruber/builtins.svg)](https://greenkeeper.io/)
+[![build status](https://secure.travis-ci.org/juliangruber/builtins.svg)](http://travis-ci.org/juliangruber/builtins) [![Greenkeeper badge](https://badges.greenkeeper.io/juliangruber/builtins.svg)](https://greenkeeper.io/)
 
 ## Example
 
@@ -33,4 +32,4 @@ assert(builtins.indexOf('wasi') > -1)
 
 ## License
 
-  MIT
+MIT
