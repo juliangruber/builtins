@@ -1,5 +1,7 @@
 # builtins
 
+[![CI](https://github.com/juliangruber/builtins/actions/workflows/ci.yml/badge.svg)](https://github.com/juliangruber/builtins/actions/workflows/ci.yml)
+
 List of node.js [builtin modules](http://nodejs.org/api/).
 
 ## Usage
