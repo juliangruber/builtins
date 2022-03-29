@@ -2,7 +2,7 @@
 
 const semver = require('semver')
 
-const coreModules = [
+const permanentModules = [
   'assert',
   'buffer',
   'child_process',
@@ -56,7 +56,7 @@ const experimentalModules = {
 }
 
 module.exports = ({ version = process.version, experimental = false } = {}) => {
-  const builtins = [...coreModules]
+  const builtins = [...permanentModules]
 
   for (const [name, semverRange] of Object.entries(versionLockedModules)) {
     if (version === '*' || semver.satisfies(version, semverRange)) {
