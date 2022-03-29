@@ -41,7 +41,7 @@ module.exports = function ({
     'zlib'
   ]
 
-  var versionLockedModules = {
+  const versionLockedModules = {
     freelist: '<6.0.0',
     v8: '>=1.0.0',
     process: '>=1.1.0',
@@ -53,27 +53,27 @@ module.exports = function ({
     worker_threads: '>=12.0.0'
   }
 
-  Object.entries(versionLockedModules).forEach(([name, v]) => {
-    if (version === '*' || semver.satisfies(version, v)) {
+  for (const [name, semverRange] of Object.entries(versionLockedModules)) {
+    if (version === '*' || semver.satisfies(version, semverRange)) {
       coreModules.push(name)
     }
-  })
+  }
 
-  var experimentalModules = {
+  const experimentalModules = {
     worker_threads: '>=10.5.0',
     wasi: '>=12.16.0',
     diagnostics_channel: '^14.17.0 || >=15.1.0'
   }
 
   if (experimental) {
-    Object.entries(experimentalModules).forEach(([name, v]) => {
+    for (const [name, semverRange] of Object.entries(experimentalModules)) {
       if (
         !coreModules.includes(name) &&
-        (version === '*' || semver.satisfies(version, v))
+        (version === '*' || semver.satisfies(version, semverRange))
       ) {
         coreModules.push(name)
       }
-    })
+    }
   }
 
   return coreModules
