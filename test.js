@@ -101,9 +101,6 @@ test('default to current version', t => {
 })
 
 test('returns all builtins with version *', t => {
-  assert.strictEqual(builtins({ version: '*' }).length, 32 + 9)
-  assert.strictEqual(
-    builtins({ version: '*', experimental: true }).length,
-    32 + 9 + 2
-  )
+  assert.strictEqual(builtins({ version: '*' }).length, 42)
+  assert.strictEqual(builtins({ version: '*', experimental: true }).length, 44)
 })
