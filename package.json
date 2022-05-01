@@ -7,13 +7,13 @@
   "main": "index.js",
   "files": [],
   "scripts": {
-    "test": "prettier-standard && standard && node-core-test"
+    "test": "prettier-standard && standard && node--test"
   },
   "dependencies": {
     "semver": "^7.0.0"
   },
   "devDependencies": {
-    "node-core-test": "^1.4.0",
+    "node-core-test": "^2.0.0",
     "prettier-standard": "^15.0.1",
     "standard": "^14.3.4"
   }
