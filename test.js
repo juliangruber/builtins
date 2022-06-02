@@ -1,6 +1,6 @@
 'use strict'
 
-const test = require('node-core-test')
+const test = require('test')
 const assert = require('assert')
 const builtins = require('./')
 

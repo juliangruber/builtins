@@ -13,7 +13,7 @@
     "semver": "^7.0.0"
   },
   "devDependencies": {
-    "node-core-test": "^2.0.0",
-    "standard": "^17.0.0"
+    "standard": "^17.0.0",
+    "test": "^3.0.0"
   }
 }
