@@ -1,8 +1,7 @@
-'use strict'
+import assert from 'node:assert'
+import { test } from 'node:test'
 
-const test = require('test')
-const assert = require('assert')
-const builtins = require('./')
+import builtins from './index.js'
 
 test('freelist', t => {
   assert(builtins({ version: '5.99.99' }).includes('freelist'))
