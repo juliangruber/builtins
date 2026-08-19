@@ -1,4 +1,4 @@
-import satisfies from 'semver/functions/satisfies'
+import { satisfies } from 'semver'
 
 const permanentModules = [
   'assert',
