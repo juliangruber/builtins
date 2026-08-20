@@ -1,10 +1,12 @@
 {
   "name": "builtins",
-  "version": "5.1.0",
+  "version": "6.0.0",
   "description": "List of node.js builtin modules",
   "repository": "juliangruber/builtins",
   "license": "MIT",
-  "files": ["index.js"],
+  "files": [
+    "index.js"
+  ],
   "type": "module",
   "exports": "./index.js",
   "scripts": {
