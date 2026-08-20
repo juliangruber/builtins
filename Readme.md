@@ -7,7 +7,7 @@ List of node.js [builtin modules](http://nodejs.org/api/).
 ## Usage
 
 ```js
-const builtins = require('builtins')
+import builtins from 'builtins'
 ```
 
 Get list of core modules for current Node.js version:
