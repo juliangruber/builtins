@@ -4,7 +4,7 @@
   "description": "List of node.js builtin modules",
   "repository": "juliangruber/builtins",
   "license": "MIT",
-  "files": [],
+  "files": ["index.js"],
   "type": "module",
   "exports": "./index.js",
   "scripts": {
