@@ -5,18 +5,23 @@
   "repository": "juliangruber/builtins",
   "license": "MIT",
   "files": [
-    "index.js"
+    "dist"
   ],
   "type": "module",
-  "exports": "./index.js",
+  "exports": "./dist/index.js",
   "scripts": {
-    "test": "standard --fix && node --test"
+    "build": "tsc",
+    "test": "standard --fix && node --test",
+    "pretest": "npm run build",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "verkit": "^0.4.0"
   },
   "devDependencies": {
-    "standard": "17.0.0"
+    "@types/node": "26.2.0",
+    "standard": "17.0.0",
+    "typescript": "7.0.2"
   },
   "engines": {
     "node": ">=22.0.0"

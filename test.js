@@ -2,7 +2,7 @@ import assert from 'node:assert'
 import { createRequire } from 'node:module'
 import { test } from 'node:test'
 
-import builtins from './index.js'
+import builtins from './dist/index.js'
 
 test('freelist', t => {
   assert(builtins({ version: '5.99.99' }).includes('freelist'))
