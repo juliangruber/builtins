@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "bundler",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "moduleDetection": "force",
 
     "declaration": true,
@@ -26,5 +26,7 @@
 
     "rootDir": "src",
     "outDir": "dist"
-  }
+  },
+
+  "include": ["src"]
 }

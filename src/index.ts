@@ -54,7 +54,7 @@ const experimentalModules = {
   diagnostics_channel: '^14.17.0 || >=15.1.0'
 }
 
-interface Options {
+export interface Options {
   /**
    * Defaults to `process.version`
    */
