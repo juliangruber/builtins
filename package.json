@@ -16,7 +16,7 @@
     "lint:fix": "oxfmt && oxlint --fix",
     "test": "npm run lint:fix && node --test",
     "pretest": "npm run build",
-    "prepublishOnly": "npm run build"
+    "prepare": "npm run build"
   },
   "dependencies": {
     "verkit": "^0.4.0"
