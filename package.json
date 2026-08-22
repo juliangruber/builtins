@@ -2,21 +2,24 @@
   "name": "builtins",
   "version": "6.0.0",
   "description": "List of node.js builtin modules",
-  "repository": "juliangruber/builtins",
   "license": "MIT",
+  "repository": "juliangruber/builtins",
   "files": [
     "index.js"
   ],
   "type": "module",
   "exports": "./index.js",
   "scripts": {
-    "test": "standard --fix && node --test"
+    "lint": "oxfmt --check && oxlint",
+    "lint:fix": "oxfmt && oxlint --fix",
+    "test": "npm run lint:fix && node --test"
   },
   "dependencies": {
     "verkit": "^0.4.0"
   },
   "devDependencies": {
-    "standard": "17.0.0"
+    "oxfmt": "0.64.0",
+    "oxlint": "1.79.0"
   },
   "engines": {
     "node": ">=22.0.0"
