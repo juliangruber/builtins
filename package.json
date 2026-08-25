@@ -14,7 +14,7 @@
     "build": "tsc",
     "lint": "oxfmt --check && oxlint",
     "lint:fix": "oxfmt && oxlint --fix",
-    "test": "npm run lint:fix && node --test",
+    "test": "node --test",
     "pretest": "npm run build",
     "prepare": "npm run build"
   },
