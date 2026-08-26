@@ -54,25 +54,41 @@ const experimentalModules = {
   diagnostics_channel: '^14.17.0 || >=15.1.0'
 }
 
-export default ({ version = process.version, experimental = false } = {}) => {
-  const builtins = [...permanentModules]
+export interface Options {
+  /**
+   * Defaults to `process.version`
+   */
+  version?: string
+  /**
+   * @default `false`
+   */
+  experimental?: boolean
+}
+
+const builtins = ({
+  version = process.version,
+  experimental = false
+}: Options = {}): string[] => {
+  const builtinModules = [...permanentModules]
 
   for (const [name, semverRange] of Object.entries(versionLockedModules)) {
     if (version === '*' || satisfies(version, semverRange)) {
-      builtins.push(name)
+      builtinModules.push(name)
     }
   }
 
   if (experimental) {
     for (const [name, semverRange] of Object.entries(experimentalModules)) {
       if (
-        !builtins.includes(name) &&
+        !builtinModules.includes(name) &&
         (version === '*' || satisfies(version, semverRange))
       ) {
-        builtins.push(name)
+        builtinModules.push(name)
       }
     }
   }
 
-  return builtins
+  return builtinModules
 }
+
+export default builtins
